@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(../img/background.jpg);
+  overflow: hidden;
+}
+
+#solarsystem {
+  height: 900px;
+  width: 900px;
+  position: relative;
+  transform:scale(0.5);
+}
+
+/* ------------------------------------------------------------- */
+#sun, .planet {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.planet {
+  border: 2px dashed white;
+}
+
+#sun {
+  width: 100px;
+  height: 100px;
+  left: 400px;
+  top: 400px;
+  background-image: url(../img/soleil.png);
+  background-size: cover;
+}
+
+#mercury {
+  width: 200px;
+  height: 200px;
+  left:350px;
+  top: 350px;
+  animation: orbit 7.23s linear infinite;
+}
+
+#mercury::after{
+  content: "";
+  width:10px;
+  height: 10px;
+  top: 61px;
+  background-image: url(../img/mercury.png);
+  background-size: cover;
+}
+
+#venus {
+  width: 300px;
+  height: 300px;
+  left: 300px;
+  top: 300px;
+  animation: orbit 18.45s linear infinite;
+}
+
+#venus::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 83px;
+  background-image: url(../img/venus.png);
+  background-size: cover;
+}
+
+#terre {
+  width: 400px;
+  height: 400px;
+  top: 250px;
+  left: 250px;
+  animation: orbit 30s linear infinite;
+}
+
+#terre::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 115px;
+  background-image: url(../img/terre2.png);
+  background-size: cover;
+}
+#mars {
+  width: 500px;
+  height: 500px;
+  top: 200px;
+  left: 200px;
+  animation: orbit 56.43s linear infinite;
+}
+
+#mars::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 186px;
+  background-image: url(../img/mars.png);
+  background-size: cover;
+}
+#jupiter {
+  width: 700px;
+  height: 700px;
+  top: 100px;
+  left: 100px;
+  animation: orbit 355.8s linear infinite;
+}
+
+#jupiter::after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  top: 130px;
+  background-image: url(../img/jupiter.png);
+  background-size: cover;
+}
+#saturne {
+  width: 1000px;
+  height: 1000px;
+  top: -50px;
+  left: -50px;
+  animation: orbit 883s linear infinite;
+}
+
+#saturne::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  top: 262px;
+  background-image: url(../img/saturne.png);
+  background-size: cover;
+}
+#uranus {
+  width: 1300px;
+  height: 1300px;
+  top: -200px;
+  left: -200px;
+  animation: orbit 2520.3s linear infinite;
+}
+
+#uranus::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 419px;
+  background-image: url(../img/uranus.png);
+  background-size: cover;
+}
+#neptune {
+  width: 1600px;
+  height: 1600px;
+  top: -350px;
+  left: -350px;
+  animation: orbit 4944s linear infinite;
+}
+
+#neptune::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 546px;
+  background-image: url(../img/neptune.png);
+  background-size: cover;
+}
+
+/* ------------ */
+#sun, 
+#mercury::after,
+#venus::after,
+#terre::after,
+#mars::after,
+#jupiter::after,
+#saturne::after,
+#uranus::after,
+#neptune::after {
+  position: absolute;
+  border-radius: 50%;
+  /* background:#000;
+  opacity: 0.6; */
+}
+
+@keyframes orbit {
+  100% {transform: rotate(360deg);}
+}
+
+
+/*DESCRIPTION*/
+
+ul#descriptions {
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  margin-top: 15px;
+  top: 200px;
+  right: 450px;
+  list-style: none;
+  border: rgb(92, 173, 74) 5px solid;
+  background-image:url(../img/portail.png);
+  background-size: cover;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+}
+ul#descriptions h2 {
+  cursor: url(../img/cursor.cur), pointer;
+  color: black;
+  font-size: 36px;
+  position: relative;
+}
+
+ul#descriptions li p {
+  position: absolute;
+  left: -250px;
+  top: 0;
+  width: 200px;
+  display: inline;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #0f132c;
+  padding: 30px;
+  color: white;
+  line-height: 1.7;
+  z-index: 100;
+  border: 1px solid #1c203c;
+}
+ul#descriptions h2:hover+p {
+  visibility: visible;
+  opacity: 0.9;
+  left: -280px;
+}
+
+
+@keyframes bepboplula{
+  0%{
+    left: -500px;
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+#Rick{
+  position: absolute;
+  left: -500px;
+  top:750px;
+  width:250px;
+  height: 154px;
+  animation: bepboplula 15s linear infinite;
+  background: url('../img/Rick.png');
+  background-size: cover;
+}
